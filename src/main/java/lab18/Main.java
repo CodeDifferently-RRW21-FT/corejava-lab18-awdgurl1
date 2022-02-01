@@ -100,9 +100,10 @@ public class Main {
             int next = scanner.nextInt();
             if (next == 1) {
                 flag = true;
-
+                break;
             } else {
                 flag = false;
+                break;
             }
         }
     }
