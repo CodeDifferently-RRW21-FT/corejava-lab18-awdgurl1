@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CardTest {
-    Card card = new Card(1);
+    Card card = new Card("Tariq",10);
 
     @Test
     public void constructorTest01(){
 
-        String expected = "1 1";
+        String expected = "Tariq 10";
         String actual = card.toString();
         // Then
 
@@ -17,21 +17,21 @@ public class CardTest {
     }
 
     @Test
-    public void getNumberTest(){
+    public void getNameTest(){
+        Card card = new Card("Tariq",10);
 
-
-        Integer expected = 1;
-        Integer actual = card.getNumber();
+        String expected = "Tariq";
+        String actual = card.getName();
 
         Assertions.assertEquals(expected,actual);
     }
 
     @Test
     public void getBalanceTest(){
+        Card card = new Card("Tariq",10);
 
-
-        Integer expected = 1;
-        Integer actual = card.getNumber();
+        Integer expected = 10;
+        Integer actual = card.getBalance();
 
         Assertions.assertEquals(expected,actual);
     }

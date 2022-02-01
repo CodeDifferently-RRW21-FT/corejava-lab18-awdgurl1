@@ -2,15 +2,18 @@ package lab18;
 
 public class Card {
     private static Integer cardNumberIndex = 1;
+    private String name;
     private Integer number;
     private Integer balance;
 
-    public Card(Integer balance){
+    public Card(String name, Integer balance){
+        this.name = name;
         this.number = cardNumberIndex;
         cardNumberIndex++;
         this.balance = balance;
     }
 
+    public String getName(){return name;}
     public Integer getNumber() {
         return number;
     }
@@ -24,7 +27,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return number + " " + balance;
+        return name + " " + balance;
     }
 
 
